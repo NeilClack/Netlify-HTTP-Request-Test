@@ -8,12 +8,14 @@ function App() {
 
   const makeRequest = async () => {
     const data = await TestHTTP();
-    setData(data);
+    setData(data.todo);
   };
+
+  makeRequest();
 
   return (
     <div className="App">
-      <p>{data.todo}</p>
+      <p>{data}</p>
     </div>
   );
 }
